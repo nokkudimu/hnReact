@@ -1,8 +1,7 @@
 function AppRouter() {
-
   return (
     <>
-        AppRouter
+        
     </>
   )
 }
