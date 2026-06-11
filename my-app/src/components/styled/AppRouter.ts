@@ -1,15 +1,13 @@
 import styled from "styled-components";
 
-const FooterContainer = styled.div`
+const AppRouterContainer = styled.div`
     display: flex;
+    height: 100vh;
+    width: 100vw;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
 `
 
 export {
-    FooterContainer,
+    AppRouterContainer
 }

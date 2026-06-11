@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Nav = styled.div`
+const NavContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,5 +11,5 @@ const Nav = styled.div`
 `
 
 export {
-    Nav,
+    NavContainer,
 }

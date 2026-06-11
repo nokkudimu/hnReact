@@ -1,11 +1,11 @@
-import { Nav } from './styled/NavBar.ts';
+import { NavContainer } from './styled/NavBar.ts';
 
 function NavBar() {
 
   return (
-    <Nav>
+    <NavContainer>
         NavBar
-    </Nav>
+    </NavContainer>
   )
 }
 

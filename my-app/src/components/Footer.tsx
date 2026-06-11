@@ -1,11 +1,11 @@
-import { Foot } from "./styled/Footer.ts";
+import { FooterContainer } from "./styled/Footer.ts";
 
 function Footer() {
 
   return (
-    <Foot>
+    <FooterContainer>
         Footer
-    </Foot>
+    </FooterContainer>
   )
 }
 
