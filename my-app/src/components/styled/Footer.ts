@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { type IFooter } from "../../models/IFooter";
 
-const FooterContainer = styled.div`
+const FooterContainer = styled.div<IFooter>`
     display: flex;
     justify-content: center;
     align-items: center;
