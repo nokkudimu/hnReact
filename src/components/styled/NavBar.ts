@@ -10,16 +10,37 @@ const NavContainer = styled.div`
     left: 0;
     width: 100%;
 `
-// changing the direction of an options arrow 180 degrees
-// need to create a svg arrow
-const OptionsButton = styled.div<INavBar>`
+
+// hiding/revealing menu links 
+const Links = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+`
+
+const Link = styled.a`
+    padding: 0rem 1.5rem;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease-in;
+`
+
+const OptionsButton = styled.button`
 
 `
-// hiding/revealing menu links 
-const Menu = styled.div<INavBar>`
+
+const Logo = styled.img`
 
 `
 
 export {
     NavContainer,
+    Links,
+    Link,
+    OptionsButton,
+    Logo
 }
