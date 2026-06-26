@@ -12,11 +12,12 @@ const NavContainer = styled.div`
 `
 
 // hiding/revealing menu links 
-const Links = styled.div`
+const LinksContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    width: 100%;
 `
 
 const Link = styled.a`
@@ -27,10 +28,31 @@ const Link = styled.a`
     text-decoration: none;
     color: black;
     transition: all 0.3s ease-in;
+
+    p {
+        width: max-content;
+    }
+    
+`
+
+const OptionsContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
 `
 
 const OptionsButton = styled.button`
 
+`
+
+const LogoContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
 `
 
 const Logo = styled.img`
@@ -39,8 +61,10 @@ const Logo = styled.img`
 
 export {
     NavContainer,
-    Links,
+    LinksContainer,
     Link,
+    OptionsContainer,
     OptionsButton,
+    LogoContainer,
     Logo
 }
