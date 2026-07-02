@@ -1,27 +1,31 @@
 import styled from 'styled-components';
 import { type INavBar } from '../../models/INavBar';
 
-const NavContainer = styled.div`
+const NavContainer = styled.div.withConfig({
+    shouldForwardProp: (prop) => prop !== 'isOpen',
+})<INavBar>`
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    height: 100px;
+    width: ${({ isOpen }) => (isOpen === true ? "100%" : "10%")};
 `
-
-// hiding/revealing menu links 
-const LinksContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
+ 
+const LinksContainer = styled.div.withConfig({
+    shouldForwardProp: (prop) => prop !== 'isOpen',
+})<INavBar>`
+    display: ${({ isOpen }) => (isOpen === true ? "flex" : "none")};
+    justify-content: center;
     align-items: center;
     position: relative;
-    width: 100%;
+    width: 80%;
 `
 
 const Link = styled.a`
-    padding: 0rem 1.5rem;
+    padding: 0rem 2rem;
     cursor: pointer;
     text-align: center;
     font-size: 1rem;
@@ -35,24 +39,32 @@ const Link = styled.a`
     
 `
 
-const OptionsContainer = styled.div`
+const OptionsContainer = styled.div.withConfig({
+    shouldForwardProp: (prop) => prop !== 'isOpen',
+})<INavBar>`
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 100%;
+    width: ${({ isOpen }) => (isOpen === true ? "10%" : "100%")};
 `
 
-const OptionsButton = styled.button`
-
+const OptionsButton = styled.div`
+    height: 25px;
+    width: 25px;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
 `
 
-const LogoContainer = styled.div`
-    display: flex;
+const LogoContainer = styled.div.withConfig({
+    shouldForwardProp: (prop) => prop !== 'isOpen',
+})<INavBar>`
+    display: ${({ isOpen }) => (isOpen === true ? "flex" : "none")};
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 100%;
+    width: 10%;
 `
 
 const Logo = styled.img`
