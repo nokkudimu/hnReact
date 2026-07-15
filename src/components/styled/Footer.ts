@@ -19,10 +19,9 @@ const LinkContainer = styled.div.withConfig({
     shouldForwardProp: (prop) => prop !== 'isOpen',
 })<IFooter>`
     display: ${({ isOpen }) => (isOpen === true ? "flex" : "none")};
-    flex-direction: column;
     align-items: center;
     position: relative;
-    width: 5%;
+    width: 50%;
 `
 
 const Link = styled.a`
@@ -32,9 +31,11 @@ const Link = styled.a`
     font-size: 1rem;
     text-decoration: none;
     color: black;
+    
     transition: all 0.3s ease-in;
 
     p {
+        margin: 1rem;
         width: max-content;
     }
 `
@@ -44,10 +45,9 @@ const InfoContainer = styled.div.withConfig({
 })<IFooter>`
     display: ${({ isOpen }) => (isOpen === true ? "flex" : "none")};
     flex-direction: column;
-    justify-content: right;
-    align-items: center;
+    align-items: end;
     position: relative;
-    width: 10%;
+    width: 50%;
 
     p {
         font-size: 0.80rem;
@@ -93,7 +93,7 @@ const EmptyContainer = styled.div.withConfig({
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 80%;
+    width: 2.5%;
 `
 
 export {
