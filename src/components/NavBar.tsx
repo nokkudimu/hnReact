@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Logo, LinksContainer, Link, NavContainer, OptionsButton, LogoContainer, OptionsContainer } from './styled/NavBar.ts';
+import { Logo, LinkContainer, Link, NavContainer, OptionsButton, LogoContainer, OptionsContainer } from './styled/NavBar.ts';
 
 function NavBar() {
 
@@ -10,14 +10,14 @@ function NavBar() {
       <LogoContainer isOpen={isOpen}>
           <Logo alt='logo' />
       </LogoContainer>
-      <LinksContainer isOpen={isOpen}>
+      <LinkContainer isOpen={isOpen}>
         <Link><p>link 1</p></Link>
         <Link><p>link 2</p></Link>
         <Link><p>link 3</p></Link>
         <Link><p>link 4</p></Link>
         <Link><p>link 5</p></Link>
         <Link><p>link 6</p></Link>
-      </LinksContainer>
+      </LinkContainer>
       <OptionsContainer isOpen={isOpen}>
           <OptionsButton onClick={() => setIsOpen(!isOpen)} />
       </OptionsContainer>

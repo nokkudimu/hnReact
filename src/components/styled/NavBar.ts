@@ -14,7 +14,7 @@ const NavContainer = styled.div.withConfig({
     width: ${({ isOpen }) => (isOpen === true ? "100%" : "10%")};
 `
  
-const LinksContainer = styled.div.withConfig({
+const LinkContainer = styled.div.withConfig({
     shouldForwardProp: (prop) => prop !== 'isOpen',
 })<INavBar>`
     display: ${({ isOpen }) => (isOpen === true ? "flex" : "none")};
@@ -36,7 +36,6 @@ const Link = styled.a`
     p {
         width: max-content;
     }
-    
 `
 
 const OptionsContainer = styled.div.withConfig({
@@ -68,12 +67,12 @@ const LogoContainer = styled.div.withConfig({
 `
 
 const Logo = styled.img`
-
+    cursor: pointer;
 `
 
 export {
     NavContainer,
-    LinksContainer,
+    LinkContainer,
     Link,
     OptionsContainer,
     OptionsButton,
