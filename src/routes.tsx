@@ -24,6 +24,6 @@ export const publicRoutes = [
     },
     {
         path: VOID_ROUTE,
-        element: <Navigate to="/404" />
+        element: <Navigate to="/nfound" />
     }
 ]
