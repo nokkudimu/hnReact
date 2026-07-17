@@ -7,18 +7,18 @@ const NavContainer = styled.div.withConfig({
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     height: 100px;
-    width: ${({ isOpen }) => (isOpen === true ? "100%" : "10%")};
+    width: 100%;
 `
  
 const LinkContainer = styled.div.withConfig({
     shouldForwardProp: (prop) => prop !== 'isOpen',
 })<INavBar>`
     display: ${({ isOpen }) => (isOpen === true ? "flex" : "none")};
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     position: relative;
     width: 80%;
@@ -38,32 +38,14 @@ const Link = styled.a`
     }
 `
 
-const OptionsContainer = styled.div.withConfig({
-    shouldForwardProp: (prop) => prop !== 'isOpen',
-})<INavBar>`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: ${({ isOpen }) => (isOpen === true ? "10%" : "100%")};
-`
-
-const OptionsButton = styled.div`
-    height: 25px;
-    width: 25px;
-    border: 2px solid black;
-    border-radius: 50%;
-    cursor: pointer;
-`
-
 const LogoContainer = styled.div.withConfig({
     shouldForwardProp: (prop) => prop !== 'isOpen',
 })<INavBar>`
-    display: ${({ isOpen }) => (isOpen === true ? "flex" : "none")};
-    justify-content: center;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
-    width: 10%;
+    width: ${({ isOpen }) => (isOpen === true ? "20%" : "100%")};
 `
 
 const Logo = styled.img`
@@ -74,8 +56,6 @@ export {
     NavContainer,
     LinkContainer,
     Link,
-    OptionsContainer,
-    OptionsButton,
     LogoContainer,
     Logo
 }

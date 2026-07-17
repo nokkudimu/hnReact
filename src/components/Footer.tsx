@@ -5,7 +5,7 @@ import { ABOUT_ROUTE, COLLAB_ROUTE, CONTACTS_ROUTE, LOCATIONS_ROUTE, SHOP_T_ROUT
 
 function Footer() {
 
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
   const navigate = useNavigate()
 
   return (
